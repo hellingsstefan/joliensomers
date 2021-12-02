@@ -1,0 +1,18 @@
+.logo {
+    display: block;
+    color: var(--color-gray-600);
+    path {
+        fill: currentColor;
+    }
+
+    &.dark {
+        color: var(--color-gray-200);
+    }
+
+    :global(.nav-overlayMode.nav-isOpen) & {
+        position: relative;
+        z-index: 10;
+        color: var(--color-gray-200);
+    }
+}
+

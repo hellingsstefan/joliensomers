@@ -1,0 +1,19 @@
+/* CSS Variables */
+:root {
+    --color-white: #fff;
+    --color-black: #121212;
+    --color-blue-400: #0045FF;
+    --color-gray-100: #FBFBFB;
+    --color-gray-200: #F1F1F1;
+    --color-gray-300: #CBCBCB;
+    --color-gray-400: #8B8B8B;
+    --color-gray-500: #666666;
+    --color-gray-600: #343434;
+    --color-yellow-400: #FBD784;
+
+    --font-family-base: 'Open Sans', sans-serif;
+    --font-family-head: 'Bentham', serif;
+
+    --max-width: 144rem;
+    --base-padding: clamp(1.5rem, 4vw, 4rem);
+}

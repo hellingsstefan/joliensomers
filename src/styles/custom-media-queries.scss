@@ -1,0 +1,37 @@
+/* Custom Media Queries */
+
+// Minimum viewports
+@custom-media --screen-min-320    (width >= 320px);
+@custom-media --screen-min-480    (width >= 480px);
+@custom-media --screen-min-768    (width >= 768px);
+@custom-media --screen-min-1024   (width >= 1024px);
+@custom-media --screen-min-1280   (width >= 1280px);
+@custom-media --screen-min-1440   (width >= 1440px);
+
+// Maximum viewports
+@custom-media --screen-max-480    (width < 480px);
+@custom-media --screen-max-768    (width < 768px);
+@custom-media --screen-max-1024   (width < 1024px);
+@custom-media --screen-max-1280   (width < 1280px);
+@custom-media --screen-max-1440   (width < 1440px);
+
+// Viewports in between
+@custom-media --range-320-480       (width >= 320px) and (width < 480px);
+@custom-media --range-320-768       (width >= 320px) and (width < 768px);
+@custom-media --range-320-1024      (width >= 320px) and (width < 1024px);
+@custom-media --range-320-1280      (width >= 320px) and (width < 1280px);
+@custom-media --range-320-1440      (width >= 320px) and (width < 1440px);
+
+@custom-media --range-480-768       (width >= 480px) and (width < 768px);
+@custom-media --range-480-1024      (width >= 480px) and (width < 1024px);
+@custom-media --range-480-1280      (width >= 480px) and (width < 1280px);
+@custom-media --range-480-1440      (width >= 480px) and (width < 1440px);
+
+@custom-media --range-768-1024      (width >= 768px) and (width < 1024px);
+@custom-media --range-768-1280      (width >= 768px) and (width < 1280px);
+@custom-media --range-768-1440      (width >= 768px) and (width < 1440px);
+
+@custom-media --range-1024-1280     (width >= 1024px) and (width < 1280px);
+@custom-media --range-1024-1440     (width >= 1024px) and (width < 1440px);
+
+@custom-media --range-1280-1440     (width >= 1280px) and (width < 1440px);

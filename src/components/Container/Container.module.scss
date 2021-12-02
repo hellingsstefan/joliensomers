@@ -1,0 +1,9 @@
+.container {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    max-width: var(--max-width, 100%);
+    margin: 0 auto;
+    padding: 0 3rem; // fallback
+    padding: 0 var(--base-padding, 1.5rem);
+}

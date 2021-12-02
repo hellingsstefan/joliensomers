@@ -1,0 +1,25 @@
+.pageHeader {
+    box-sizing: border-box;
+
+    grid-area: header;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--base-padding, 1.5rem);
+
+    :global(.nav-overlayMode.nav-isOpen) & {
+        position: relative;
+        z-index: 10;
+    }
+
+    &.light {
+        background-color: var(--color-gray-100);
+    }
+
+    &.dark {
+        background-color: var(--color-black);
+    }
+}
