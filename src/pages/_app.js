@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/layout';
+import { withStyleContext } from '../context/StyleContext';
 import '../styles/base.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -15,4 +16,4 @@ function MyApp({ Component, pageProps }) {
     );
 }
 
-export default MyApp;
+export default withStyleContext(MyApp);

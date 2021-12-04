@@ -1,14 +1,16 @@
 import { useContext } from 'react';
-import StyleContext from './StyleContext';
+import PropTypes from 'prop-types';
 import c from 'classnames';
 import styles from './pageHeader.module.scss';
 import Logo from '../Logo';
 import Nav from '../Nav';
+import { StyleContext } from '../../context/StyleContext';
 
-export default function PageHeader(props) {
-    const { style, setStyle } = useContext(StyleContext);
+function PageHeader({ style }) {
+    const { setStyle } = useContext(StyleContext);
 
-    setStyle(props.style);
+    setStyle(style);
+
     return (
         <header className={c(styles.pageHeader, styles[style])}>
             <Logo />
@@ -16,3 +18,13 @@ export default function PageHeader(props) {
         </header>
     );
 }
+
+PageHeader.propTypes = {
+    style: PropTypes.string,
+};
+
+PageHeader.defaultProps = {
+    style: 'light',
+};
+
+export default PageHeader;

@@ -3,7 +3,7 @@ import PageHeader from '../PageHeader';
 import PageFooter from '../PageFooter';
 import styles from './Layout.module.scss';
 
-export default function Layout({ children }) {
+function Layout({ children }) {
     return (
         <>
             <Head>
@@ -11,10 +11,12 @@ export default function Layout({ children }) {
                 <meta name="description" content="Fotografie portfolio van Jolien Somers" />
             </Head>
             <PageHeader />
-            <main className={styles.main}>
-                {children}
-            </main>
+                <main className={styles.main}>
+                    {children}
+                </main>
             <PageFooter />
         </>
     );
 }
+
+export default Layout;

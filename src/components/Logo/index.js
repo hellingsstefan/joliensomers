@@ -1,11 +1,11 @@
 import { useContext } from 'react';
-import PageHeaderStyleContext from '../PageHeader/StyleContext';
 import c from 'classnames';
 import Link from 'next/link';
 import styles from './Logo.module.scss';
+import { StyleContext } from '../../context/StyleContext';
 
-export default function Logo() {
-    const { style } = useContext(PageHeaderStyleContext);
+function Logo() {
+    const { style } = useContext(StyleContext);
 
     return (
         <Link href="/">
@@ -37,3 +37,5 @@ export default function Logo() {
         </Link>
     );
 }
+
+export default Logo;

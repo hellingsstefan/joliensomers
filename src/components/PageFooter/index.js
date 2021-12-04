@@ -1,9 +1,11 @@
 import styles from './pageFooter.module.scss';
 
-export default function PageFooter() {
+function PageFooter() {
     return (
         <footer className={styles.pageFooter}>
             pageFooter
         </footer>
     );
 }
+
+export default PageFooter;
