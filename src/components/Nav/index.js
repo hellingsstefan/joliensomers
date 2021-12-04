@@ -92,11 +92,35 @@ class Nav extends Component {
         const { isOpen } = this.state;
 
         (isOpen)
-            ? document.body.classList.add('nav-isOpen')
-            : document.body.classList.remove('nav-isOpen');
+            ? this._openNav()
+            : this._closeNav();
+    }
+
+    _openNav() {
+        document.body.classList.add('nav-isOpen');
+        this._attachAnimation();
+    }
+
+    _closeNav() {
+        document.body.classList.remove('nav-isOpen');
+        this._attachAnimation();
     }
 
     _toggleNav = () => this.setState({ isOpen: !this.state.isOpen }, () => this._handleToggle());
+
+    _attachAnimation = () => {
+        const target = this.navRef.current;
+
+        target.classList.add(styles.transitioning);
+        target.addEventListener("transitionend", this._cleanupAnimation, false);
+    }
+
+    _cleanupAnimation = () => {
+        const target = this.navRef.current;
+
+        target.classList.remove(styles.transitioning);
+        target.removeEventListener("transitionend", this._cleanupAnimation, false);
+    }
 
     render() {
         const { mode } = this.state;

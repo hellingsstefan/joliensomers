@@ -11,9 +11,11 @@
     flex-direction: row;
     align-items: center;
 
-    transition:
-        background-color 0.2s ease,
-        opacity 0.2s ease;
+    :local(.transitioning) & {
+        transition:
+            background-color 0.2s ease,
+            opacity 0.2s ease;
+    }
 
     :global(.nav-initMode) & {
         position: fixed;
@@ -71,7 +73,10 @@
     line-height: 1;
     text-transform: uppercase;
     letter-spacing: 0.09rem;
-    transition: color 0.2s ease;
+
+    :local(.transitioning) & {
+        transition: color 0.2s ease;
+    }
 
     @media screen and (orientation: landscape) {
         margin: 2rem;
@@ -85,6 +90,7 @@
         opacity: 0;
 
         transform: translate(0, -50%);
+
         transition:
             opacity 0.2s ease,
             transform 0.2s ease;
@@ -113,7 +119,9 @@
         height: .1rem;
         background-color: var(--color-gray-600);
 
-        transition: max-width 0.2s ease;
+        :local(.transitioning) & {
+            transition: max-width 0.2s ease;
+        }
     }
 
     &::before {
