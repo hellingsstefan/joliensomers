@@ -1,0 +1,89 @@
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &:local(.in-overlay-nav) {
+        width: 0;
+        height: 0;
+        gap: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        :global(.nav-transitioning) & {
+            transition:
+                opacity .2s ease-in-out,
+                transform .2s ease-in-out;
+        }
+
+        :global(.nav-overlayMode) & {
+            width: 100%;
+            padding-top: 6rem;
+            gap: 3rem;
+            opacity: 0;
+            transform: translate(0, 2.4rem);
+            transition-delay: .3s;
+        }
+
+        :global(.nav-overlayMode.nav-isOpen) & {
+            pointer-events: initial;
+            opacity: 1;
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.name {
+    display: none;
+}
+
+.icon {
+    display: block;
+    font-size: 2.4rem;
+    line-height: 0;
+    width: 1em;
+    height: 1em;
+
+    color: var(--color-gray-600);
+    transition: color .2s ease;
+
+    &:hover,
+    &:focus {
+        color: var(--color-gray-500);
+    }
+
+    &:active {
+        color: var(--color-gray-400);
+    }
+
+    &::after {
+        content: '';
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        font-size: inherit;
+
+        background-color: currentColor;
+        background-repeat: no-repeat;
+
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        height: 1em;
+        width: calc(2.4rem / 2.4rem * 1em);
+    }
+
+    &:local(.facebook)::after {
+        mask-image: url('./facebook.svg');
+    }
+
+    &:local(.instagram)::after {
+        mask-image: url('./instagram.svg');
+    }
+
+    &:local(.twitter)::after {
+        mask-image: url('./twitter.svg');
+    }
+}

@@ -3,6 +3,8 @@ import c from 'classnames';
 import styles from './Nav.module.scss';
 import Link from 'next/link';
 import MenuButton from '../MenuButton';
+import Social from "../../components/Social";
+import attachAnimation from '../../utils/transitioning';
 
 const items = [
     {
@@ -98,29 +100,15 @@ class Nav extends Component {
 
     _openNav() {
         document.body.classList.add('nav-isOpen');
-        this._attachAnimation();
+        attachAnimation(this.navRef.current, 'nav-transitioning');
     }
 
     _closeNav() {
         document.body.classList.remove('nav-isOpen');
-        this._attachAnimation();
+        attachAnimation(this.navRef.current, 'nav-transitioning');
     }
 
     _toggleNav = () => this.setState({ isOpen: !this.state.isOpen }, () => this._handleToggle());
-
-    _attachAnimation = () => {
-        const target = this.navRef.current;
-
-        target.classList.add(styles.transitioning);
-        target.addEventListener("transitionend", this._cleanupAnimation, false);
-    }
-
-    _cleanupAnimation = () => {
-        const target = this.navRef.current;
-
-        target.classList.remove(styles.transitioning);
-        target.removeEventListener("transitionend", this._cleanupAnimation, false);
-    }
 
     render() {
         const { mode } = this.state;
@@ -141,6 +129,7 @@ class Nav extends Component {
                             <a className={styles.navLink}>{label}</a>
                         </Link>
                     ))}
+                    <Social style="in-overlay-nav" />
                 </div>
             </nav>
         );
