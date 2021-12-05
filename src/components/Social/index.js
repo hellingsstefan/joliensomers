@@ -1,8 +1,6 @@
-// import { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Social.module.scss';
 import c from 'classnames';
-// import { attachAnimation } from '../../utils/transitioning';
 
 const items = [
     {
@@ -22,19 +20,10 @@ const items = [
     },
 ];
 
-function Social({ style, transitioning = false }) {
-    // const socialRef = useRef(null);
-
-    // if (transitioning)
-    //     attachAnimation(socialRef, styles.transitioning);
+function Social({ style }) {
 
     return (
-        <div
-            // ref={socialRef}
-            className={c(styles.social, {
-                [styles[style]]: style,
-                [styles.transitioning]: transitioning,
-            })}>
+        <div className={c(styles.social, { [styles[style]]: style })}>
             {items.map(item => (
                 <a
                     key={item.name}
@@ -52,7 +41,6 @@ function Social({ style, transitioning = false }) {
 
 Social.propTypes = {
     style: PropTypes.string,
-    transitioning: PropTypes.bool,
 };
 
 export default Social;

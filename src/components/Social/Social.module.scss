@@ -5,10 +5,12 @@
     gap: 1rem;
 
     &:local(.in-overlay-nav) {
-        width: 0;
-        height: 0;
-        gap: 0;
+        display: none;
+        width: 100%;
+        padding-top: 6rem;
+        gap: 3rem;
         opacity: 0;
+        transform: translate(0, 2.4rem);
         pointer-events: none;
 
         :global(.nav-transitioning) & {
@@ -18,11 +20,7 @@
         }
 
         :global(.nav-overlayMode) & {
-            width: 100%;
-            padding-top: 6rem;
-            gap: 3rem;
-            opacity: 0;
-            transform: translate(0, 2.4rem);
+            display: flex;
             transition-delay: .3s;
         }
 
