@@ -1,8 +1,8 @@
-import styles from './Debugger.module.scss';
+import classes from './Debugger.module.scss';
 
 function Debugger(props) {
     return (
-        <div className={styles.debugger}>
+        <div className={classes.debugger}>
             {props.children}
         </div>
      );

@@ -1,8 +1,8 @@
-import styles from './pageFooter.module.scss';
+import classes from './pageFooter.module.scss';
 
 function PageFooter() {
     return (
-        <footer className={styles.pageFooter}>
+        <footer className={classes.pageFooter}>
             pageFooter
         </footer>
     );

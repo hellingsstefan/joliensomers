@@ -1,0 +1,140 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    font-weight: normal;
+}
+
+/* Headings, lists, and text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+ol,
+ul {
+    display: block;
+    margin: 0 0 1em;
+    padding: 0;
+
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+        margin-top: 5rem;
+    }
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    --size-min: 1.6rem;
+    --size-max: 4rem;
+    --scaler: 3vw;
+    font-size: clamp(var(--size-min), var(--scaler), var(--size-max));
+    font-family: var(--font-family-head);
+    line-height: 1.3;
+    color: var(--color-gray-600);
+
+    margin-bottom: 5rem;
+}
+
+h1 {
+    --size-min: 2.488rem;
+    --size-max: 3.052rem;
+}
+
+h2 {
+    --size-min: 2.074rem;
+    --size-max: 2.441rem;
+}
+
+h3 {
+    --size-min: 1.728rem;
+    --size-max: 1.953rem;
+}
+
+h4 {
+    --size-min: 1.44rem;
+    --size-max: 1.563rem;
+}
+
+h5 {
+    --size-min: 1.4rem;
+    --size-max: 1.6rem;
+    font-family: var(--font-family-base);
+    font-weight: bold;
+}
+
+/* Text - Paragraph */
+p {
+    --size-min: 1.4rem;
+    --size-max: 1.6rem;
+    line-height: 1.75;
+    margin-bottom: 3rem;
+    color: var(--color-gray-500);
+}
+
+small {
+    font-size: 0.833rem;
+}
+
+/* Lists */
+ul,
+ol {
+    line-height: 1.75;
+    margin: 0 0 3rem;
+    padding: 0 0 0 2rem;
+
+    ul,
+    ol {
+        margin-left: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+li {
+    margin: 0;
+    padding: 0 0 0 1rem;
+}
+
+/* Description list */
+dl {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 0 3rem;
+    padding: 2rem;
+    background: var(--color-gray-200);
+
+    @media (--screen-min-435) {
+        grid-template-columns: auto auto;
+        gap: 2rem;
+    }
+
+    dt {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    dd {
+        margin: 0;
+
+        @media (--screen-max-435) {
+            margin-bottom: 2rem;
+            &:not(:last-child) {
+                padding-bottom: 2rem;
+                border-bottom: .1rem dashed var(--color-gray-300);
+            }
+        }
+    }
+}

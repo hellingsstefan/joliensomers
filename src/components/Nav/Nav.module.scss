@@ -170,4 +170,12 @@
             }
         }
     }
+
+    &.overlayModeOnly {
+        display: none;
+
+        :global(.nav-overlayMode) & {
+            display: block;
+        }
+    }
 }

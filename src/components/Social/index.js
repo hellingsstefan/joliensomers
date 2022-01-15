@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './Social.module.scss';
+import classes from './Social.module.scss';
 import c from 'classnames';
 
 const items = [
@@ -23,16 +23,16 @@ const items = [
 function Social({ style }) {
 
     return (
-        <div className={c(styles.social, { [styles[style]]: style })}>
+        <div className={c(classes.social, { [classes[style]]: style })}>
             {items.map(item => (
                 <a
                     key={item.name}
-                    className={styles.item}
+                    className={classes.item}
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer">
-                        <span className={styles.name}>{item.name}</span>
-                        <span className={c(styles.icon, styles[item.icon])} />
+                        <span className={classes.name}>{item.name}</span>
+                        <span className={c(classes.icon, classes[item.icon])} />
                     </a>
             ))}
         </div>

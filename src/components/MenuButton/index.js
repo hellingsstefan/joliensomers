@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import PropTypes from 'prop-types';
-import styles from './MenuButton.module.scss';
+import classes from './MenuButton.module.scss';
 import c from 'classnames';
 import { StyleContext } from '../../context/StyleContext';
 
@@ -15,11 +15,11 @@ function MenuButton({ onClick }) {
     return (
         <a
             href="#"
-            className={c(styles.menuButton, styles[style])}
+            className={c(classes.menuButton, classes[style])}
             onClick={event => clickHandler(event, onClick)}>
-            <span className={styles.menuButton__line}></span>
-            <span className={styles.menuButton__line}></span>
-            <span className={styles.menuButton__line}></span>
+            <span className={classes.menuButton__line}></span>
+            <span className={classes.menuButton__line}></span>
+            <span className={classes.menuButton__line}></span>
         </a>
     );
 }

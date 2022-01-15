@@ -1,3 +1,6 @@
 .main {
     grid-area: main;
+    overflow-y: scroll; // fallback
+    overflow-y: overlay;
+    padding-bottom: 4rem;
 }

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import c from 'classnames';
-import styles from './Nav.module.scss';
+import classes from './Nav.module.scss';
 import Link from 'next/link';
 import MenuButton from '../MenuButton';
 import Social from "../../components/Social";
 import attachAnimation from '../../utils/transitioning';
 
 const items = [
+    {
+        href: '/',
+        label: 'Home',
+        overlayModeOnly: true,
+    },
     {
         href: '/portfolio',
         label: 'Portfolio',
@@ -117,16 +122,22 @@ class Nav extends Component {
             <nav
                 ref={this.navRef}
                 className={c({
-                    [styles.nav]: true,
-                    [styles[mode]]: mode,
+                    [classes.nav]: true,
+                    [classes[mode]]: mode,
                 })}>
                 <MenuButton onClick={this._toggleNav} />
                 <div
                     ref={this.containerRef}
-                    className={styles.navContainer}>
-                    {items.map(({ href, label }) => (
-                        <Link href={href} key={href}>
-                            <a className={styles.navLink}>{label}</a>
+                    className={classes.navContainer}>
+                    {items.map(({ href, label, overlayModeOnly }) => (
+                        <Link
+                            href={href}
+                            key={href}>
+                            <a
+                                className={c(classes.navLink, { [classes.overlayModeOnly]: overlayModeOnly })}
+                                onClick={this._toggleNav}>
+                                {label}
+                            </a>
                         </Link>
                     ))}
                     <Social style="in-overlay-nav" />

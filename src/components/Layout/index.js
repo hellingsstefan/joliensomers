@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import PageHeader from '../PageHeader';
 import PageFooter from '../PageFooter';
-import styles from './Layout.module.scss';
+import classes from './Layout.module.scss';
 
 function Layout({ children }) {
     return (
@@ -11,7 +11,7 @@ function Layout({ children }) {
                 <meta name="description" content="Fotografie portfolio van Jolien Somers" />
             </Head>
             <PageHeader />
-                <main className={styles.main}>
+                <main className={classes.main}>
                     {children}
                 </main>
             <PageFooter />

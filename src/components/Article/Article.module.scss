@@ -1,0 +1,51 @@
+.article {
+    --safe-padding: var(--base-padding) * 2;
+    --content-width: 52rem;
+    --breakout: 14rem;
+
+    box-sizing: border-box;
+
+    display: grid;
+    width: 100vw;
+    margin-left: calc(var(--base-padding) * -1); // to ignore container padding
+    grid-template-columns: auto clamp(calc(var(--min-width) - var(--safe-padding)), 80vw, var(--content-width)) auto;
+
+    & > * {
+        grid-column: 2 / span 1;
+    }
+
+    & > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.large {
+    --content-width: 58rem;
+}
+
+.breakout {
+    --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 2));
+
+    width: var(--breakout-width);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: calc(var(--breakout-width) / 2 * -1);
+    margin-right: calc(var(--breakout-width) / 2 * -1);
+
+    &:local(.small) {
+        --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 2));
+    }
+
+    &:local(.medium) {
+        --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 4));
+    }
+
+    &:local(.large) {
+        --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 6));
+    }
+
+    &:local(.full) {
+        --breakout-width: 100vw;
+    }
+}
