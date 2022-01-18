@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import classes from './Figure.module.scss';
-import c from 'classnames';
 import Image from 'next/image';
 import Figcaption from './Figcaption';
 
