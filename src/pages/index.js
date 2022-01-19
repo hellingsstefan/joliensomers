@@ -1,5 +1,5 @@
 /** TODO
- * Media
+ * Media // oEmbed
  * Iframes
  * Links
  * Horizontal Rules
@@ -7,13 +7,13 @@
  * Code
  * Text
  *
- * check container styling
  * Glass effect on header when scrolling down
  */
 
 import images from '../utils/testimages';
 import Article from '../components/Article';
 import Figure from '../components/Figure';
+// import OEmbed from '../components/OEmbed';
 
 function Home() {
     return (
@@ -21,6 +21,7 @@ function Home() {
             <Article>
                 <h1>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h1>
                 <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
+                {/* <OEmbed url="https://www.youtube.com/watch?v=tRFOjLIl7G0" /> */}
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
                 <Figure src={images[0]} alt="A purple patch of grass" caption="This is a caption" />
                 <h2>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h2>

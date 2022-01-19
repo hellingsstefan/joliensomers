@@ -24,14 +24,6 @@ const items = [
         href: '/contact',
         label: 'Contact',
     },
-    {
-        href: '/contact2',
-        label: 'Contact',
-    },
-    {
-        href: '/contact3',
-        label: 'Contact',
-    },
 ];
 
 class Nav extends Component {
