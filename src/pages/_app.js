@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import { withStyleContext } from '../context/StyleContext';
 import '../styles/base.scss';
 
