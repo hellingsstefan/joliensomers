@@ -36,6 +36,12 @@ body {
         width: 100%;
         height: 100vh;
         overflow: hidden;
+
+        // Using the following ignore rule because otherwise
+        // the resulting warnings prevent a build from succeeding
+        // Hypothesized reason: Autoprefixer can't handle grid-template
+        // accross multiple files.
+        /* autoprefixer: ignore next warning */
         grid-template:
             'header' min-content
             'main' auto

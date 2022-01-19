@@ -7,11 +7,11 @@ module.exports = {
             {
                 "autoprefixer": {
                     "flexbox": "no-2009",
-                    "grid": "autoplace",
+                    "grid": true,
                 },
                 "stage": 3,
                 "features": {
-                    "custom-properties": false,
+                    "custom-properties": true,
                 },
             },
         ],
