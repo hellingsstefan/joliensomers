@@ -37,3 +37,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## Images
 
 Testimages by [unsplash.com](https://unsplash.com/).
+
+## Todo
+- Iframes
+- OEmbed or 3rd-party-media
+- Glass effect on header when scrolling down
