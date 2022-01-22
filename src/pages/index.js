@@ -49,7 +49,7 @@ function Home() {
                 <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I&apos;m sorry, Dave. I&apos;m afraid I can't do that.</q></p>
                 <Blockquote
                     quote='Superleuke foto&apos;s! Ook het maken van de reportage vonden onze jongens heel leuk en dan heb je natuurlijk blije gezichten op je foto&apos;s!'
-                    caption="Ancy Vogels" />
+                    caption="Ancy V." />
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
                 <Blockquote
                     quote={(
@@ -62,7 +62,7 @@ function Home() {
                     )}
                     caption={(
                         <cite>
-                            <a href="https://www.google.com/maps/contrib/111680607615899385832/reviews/@50.9970112,5.3450614,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-BE" target="_blank" rel="noreferrer">Kelly Indeherberge</a>
+                            <a href="https://www.google.com/maps/contrib/111680607615899385832/reviews/@50.9970112,5.3450614,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-BE" target="_blank" rel="noreferrer">Kelly I.</a>
                         </cite>
                     )} />
                 <h4>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h4>
