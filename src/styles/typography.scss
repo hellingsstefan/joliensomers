@@ -79,13 +79,73 @@ h5 {
 p {
     --size-min: 1.4rem;
     --size-max: 1.6rem;
+    --scaler: 3vw;
+    font-size: clamp(var(--size-min), var(--scaler), var(--size-max));
     line-height: 1.75;
     margin-bottom: 3rem;
     color: var(--color-gray-500);
+
+    &.summary {
+        --size-min: 1.6rem;
+        --size-max: 1.8rem;
+    }
 }
 
 small {
     font-size: 0.833rem;
+}
+
+/* Link */
+article {
+    // Regular links
+    a {
+        color: var(--color-gray-600);
+        font-style: italic;
+        text-decoration: underline;
+
+        &:hover,
+        &:focus {
+            color: var(--color-gray-500);
+        }
+
+        &:active {
+            color: var(--color-gray-400);
+        }
+    }
+
+    // External links
+    a[target="_blank"] {
+        &::after {
+            content: url("../public/icon/external.svg");
+
+            position: relative;
+            top: 0.2rem;
+
+            display: inline-block;
+            width: 1em;
+            padding-left: 0.3rem;
+            height: 1em;
+        }
+    }
+}
+
+/* Horizontal rule */
+hr {
+    --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 2));
+
+    position: relative;
+    left: 50%;
+    right: 50%;
+
+    display: block;
+    width: var(--breakout-width);
+    margin: 2rem calc(var(--breakout-width) / 2 * -1) 5rem;
+    padding: 0;
+
+    border: none;
+    border-top: medium dotted var(--color-gray-200);
+
+    overflow: visible; /* For IE */
 }
 
 /* Lists */
@@ -133,7 +193,7 @@ dl {
             margin-bottom: 2rem;
             &:not(:last-child) {
                 padding-bottom: 2rem;
-                border-bottom: .1rem dashed var(--color-gray-300);
+                border-bottom: 0.1rem dashed var(--color-gray-300);
             }
         }
     }

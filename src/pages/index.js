@@ -1,8 +1,6 @@
 /** TODO
  * Media // oEmbed
  * Iframes
- * Links
- * Horizontal Rules
  * Blockquotes
  * Code
  * Text
@@ -13,14 +11,18 @@
 import images from '../utils/testimages';
 import Article from '../components/Article';
 import Figure from '../components/Figure';
+import Blockquote from '../components/Blockquote';
 // import OEmbed from '../components/OEmbed';
 
 function Home() {
     return (
         <div className="container">
             <Article>
-                <h1>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h1>
-                <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
+                <Article.Breakout className="h-text-center h-safe-padding">
+                    <h1>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h1>
+                    <p className="summary">What <a href="https://www.google.com/" target="_blank" rel="noreferrer">looked like a small patch</a> of purple grass, above five feet square, was moving across the sand in their direction.</p>
+                </Article.Breakout>
+                <hr />
                 {/* <OEmbed url="https://www.youtube.com/watch?v=tRFOjLIl7G0" /> */}
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
                 <Figure src={images[0]} alt="A purple patch of grass" caption="This is a caption" />
@@ -40,10 +42,29 @@ function Home() {
                     </li>
                     <li>Another item to finish it off</li>
                 </ol>
+                <hr />
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
                 <h3>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h3>
                 <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
+                <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I&apos;m sorry, Dave. I&apos;m afraid I can't do that.</q></p>
+                <Blockquote
+                    quote='Superleuke foto&apos;s! Ook het maken van de reportage vonden onze jongens heel leuk en dan heb je natuurlijk blije gezichten op je foto&apos;s!'
+                    caption="Ancy Vogels" />
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
+                <Blockquote
+                    quote={(
+                        <>
+                            <p>Wij kozen-na een eerdere positieve ervaring bij Pixelkings - opnieuw voor een studio fotoshoot bij Jolien en Stefan.</p>
+                            <p>Onze zoon houdt niet van drukte en heeft wat tijd nodig om te ontdooien en daar hielden Jolien en Stefan super rekening mee. Yarne (zoon) had niet het gevoel dat hij moest presteren en hij was de binnen de kortste keren op zijn gemak. Jolien kan zich volop concentreren op het foto&apos;s maken en haar partner Stefan zorgt voor de begeleiding. Hij doet de poses voor. Zorgt voor de juiste lach op het juiste moment!</p>
+                            <p>Wij vinden ze als duo in ieder geval ideaal! Ze gaan zelf ook heel relaxed met elkaar om en dat straalt ook op &quot;het fotomodel&quot; af ;) Als je houdt van een ontspannen, rustige sfeer zonder druk en met een heel groot gevoel voor humor ben je bij Pixelkings op het juiste adres!!</p>
+                            <p>Ook belangrijk dat de &quot;dienst na verkoop&quot; ook het vermelden waard is. Na onze keuze voor de foto&apos;s gemaakt te hebben, kregen we zeer snel onze hoge resolutie bestanden. Professioneel bewerkt. Jolien en Stefan. Doe zo verder!</p>
+                        </>
+                    )}
+                    caption={(
+                        <cite>
+                            <a href="https://www.google.com/maps/contrib/111680607615899385832/reviews/@50.9970112,5.3450614,17z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-BE" target="_blank" rel="noreferrer">Kelly Indeherberge</a>
+                        </cite>
+                    )} />
                 <h4>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h4>
                 <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
                 <ul>

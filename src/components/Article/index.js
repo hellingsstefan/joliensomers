@@ -2,11 +2,16 @@ import PropTypes from 'prop-types';
 import classes from './Article.module.scss';
 import c from 'classnames';
 
-const Breakout = ({ children, size }) => (
-    <div className={c(classes.breakout, { [classes[size]]: size })}>
-        {children}
-    </div>
-);
+const Breakout = ({ children, size, className: extraClasses }) => {
+    return (
+        <div className={c(classes.breakout, {
+            [classes[size]]: size,
+            [extraClasses]: extraClasses,
+        })}>
+            {children}
+        </div>
+    );
+};
 
 const Article = ({ children, large }) => {
     return (
@@ -19,6 +24,7 @@ const Article = ({ children, large }) => {
 Article.Breakout = Breakout;
 Article.Breakout.propTypes = {
     breakout: PropTypes.oneOf([ 'small', 'medium', 'large', 'full' ]),
+    className: PropTypes.string,
 };
 
 Article.propTypes = {
