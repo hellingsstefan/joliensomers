@@ -35,7 +35,7 @@ function Textpage() {
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
                 <h3>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h3>
                 <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
-                <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I&apos;m sorry, Dave. I&apos;m afraid I can't do that.</q></p>
+                <p>When Dave asks HAL to open the pod bay door, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921">I&apos;m sorry, Dave. I&apos;m afraid I can&apos;t do that.</q></p>
                 <Blockquote
                     quote='Superleuke foto&apos;s! Ook het maken van de reportage vonden onze jongens heel leuk en dan heb je natuurlijk blije gezichten op je foto&apos;s!'
                     caption="Ancy V." />

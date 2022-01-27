@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import testImages from '../../../utils/testimages';
 import PhotoCard from '../../../components/PhotoCard';
 
-const Reportage = (req) => {
+const Reportage = () => {
     const router = useRouter();
     const { name } = router.query;
 
