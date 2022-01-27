@@ -41,6 +41,7 @@
                 "next": ["const", "let", "var"]
             }
         ],
+        "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "space-before-function-paren": ["error", {
             "anonymous": "never",

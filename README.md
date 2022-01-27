@@ -42,3 +42,26 @@ Testimages by [unsplash.com](https://unsplash.com/).
 - Iframes
 - OEmbed or 3rd-party-media
 - Glass effect on header when scrolling down
+- Text Select Color
+
+
+## Calculating scaler for fluid font-size
+Calculating preferred value parameters based on specific starting and ending points.
+
+clamp(min-font-size, scaler, max-font-size);
+
+α = viewport-width
+β = rem-base // idealy should be 1rem
+
+y1 = min-font-size
+y2 = max-font-size
+
+x1 = min-screen-size (starting point)
+x2 = max-screen-size (ending point)
+
+α = (100 * (y2 - y1) / (x2 - x1)
+β = ((x1 * y2) - (x2 * y1)) / (x1 - x2)
+
+scaler = α + β
+
+clamp([y1]rem, [α]vw + [β]rem, [y2]rem);

@@ -2,6 +2,9 @@
     box-sizing: border-box;
     display: block;
     width: 100%;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
     padding-left: var(--base-padding);
     padding-right: var(--base-padding);
 }

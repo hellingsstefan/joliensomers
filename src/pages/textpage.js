@@ -1,4 +1,4 @@
-import images from '../utils/testimages';
+import testImages from '../utils/testimages';
 import Article from '../components/Article';
 import Figure from '../components/Figure';
 import Blockquote from '../components/Blockquote';
@@ -13,7 +13,7 @@ function Textpage() {
                 </Article.Breakout>
                 <hr />
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
-                <Figure src={images[0]} alt="A purple patch of grass" caption="This is a caption" />
+                <Figure src={testImages[0]} alt="A purple patch of grass" caption="This is a caption" />
                 <h2>The Importance Of Testing A Visual Type Scale On A Mobile Phone</h2>
                 <p>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</p>
                 <small className='h-margin-bottom-3'>What looked like a small patch of purple grass, above five feet square, was moving across the sand in their direction.</small>
@@ -168,11 +168,11 @@ function Textpage() {
                     </table>
                 </div>
                 <p>When it came near enough he perceived that it was not grass; there were no blades, but only purple roots. The roots were revolving, for each small plant in the whole patch, like the spokes of a rimless wheel.</p>
-                <Figure src={images[2]} alt="A purple patch of grass" caption="This image has no breakout" />
-                <Article.Breakout size="small"><Figure src={images[2]} alt="A purple patch of grass" caption="This image has a small breakout" /></Article.Breakout>
-                <Article.Breakout size="medium"><Figure src={images[2]} alt="A purple patch of grass" caption="This image has a medium breakout" /></Article.Breakout>
-                <Article.Breakout size="large"><Figure src={images[2]} alt="A purple patch of grass" caption="This image has a large breakout" /></Article.Breakout>
-                <Article.Breakout size="full"><Figure src={images[2]} alt="A purple patch of grass" caption="This image has a full breakout" /></Article.Breakout>
+                <Figure src={testImages[2]} alt="A purple patch of grass" caption="This image has no breakout" />
+                <Article.Breakout size="small"><Figure src={testImages[2]} alt="A purple patch of grass" caption="This image has a small breakout" /></Article.Breakout>
+                <Article.Breakout size="medium"><Figure src={testImages[2]} alt="A purple patch of grass" caption="This image has a medium breakout" /></Article.Breakout>
+                <Article.Breakout size="large"><Figure src={testImages[2]} alt="A purple patch of grass" caption="This image has a large breakout" /></Article.Breakout>
+                <Article.Breakout size="full"><Figure src={testImages[2]} alt="A purple patch of grass" caption="This image has a full breakout" /></Article.Breakout>
             </Article>
         </div>
     );

@@ -3,4 +3,8 @@
     overflow-y: scroll; // fallback
     overflow-y: overlay;
     padding-bottom: 4rem;
+
+    :global(.nav-isOpen) & {
+        pointer-events: none; // prevent clicking when menu is open
+    }
 }

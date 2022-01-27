@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import classes from './Blockquote.module.scss';
 
 const Blockquote = ({ quote, caption }) => (
@@ -13,11 +13,14 @@ const Blockquote = ({ quote, caption }) => (
 );
 
 Blockquote.propTypes = {
-    quote: PropTypes.string.isRequired,
+    quote: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.object,
+    ]).isRequired,
     caption: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.object,
-    ]),
+    ]).isRequired,
 };
 
 export default Blockquote;

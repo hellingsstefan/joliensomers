@@ -3,7 +3,7 @@ import c from 'classnames';
 import classes from './Nav.module.scss';
 import Link from 'next/link';
 import MenuButton from '../MenuButton';
-import Social from "../../components/Social";
+import Social from '../../components/Social';
 import attachAnimation from '../../utils/transitioning';
 
 const items = [
@@ -23,6 +23,10 @@ const items = [
     {
         href: '/contact',
         label: 'Contact',
+    },
+    {
+        href: '/textpage',
+        label: 'Textpage',
     },
 ];
 

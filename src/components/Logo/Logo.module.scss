@@ -1,8 +1,29 @@
 .logo {
+    position: relative;
     display: block;
+    margin: 0;
+    padding: 0;
     color: var(--color-gray-600);
-    path {
-        fill: currentColor;
+
+    // Outline
+    &::after {
+        content: '';
+        position: absolute;
+        top: -.5rem;
+        left: -.5rem;
+        bottom: -.5rem;
+        right: -.5rem;
+
+        transition: opacity .3s ease;
+
+        display: block;
+        box-shadow: 0 0 0 .1rem var(--color-gray-300);
+        border-radius: .3rem;
+        opacity: 0;
+
+        :global(.nav-isOpen) & {
+            box-shadow: 0 0 0 .1rem var(--color-gray-500);
+        }
     }
 
     &.dark {
@@ -13,6 +34,22 @@
         position: relative;
         z-index: 10;
         color: var(--color-gray-200);
+    }
+
+    &:focus {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    svg {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    path {
+        fill: currentColor;
     }
 }
 

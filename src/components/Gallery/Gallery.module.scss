@@ -1,0 +1,40 @@
+@import "../../styles/scss-variables";
+@import "../../styles/functions";
+@import "../../styles/custom-media-queries";
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: fluidClamp(3, 4);
+
+    // Fixed pattern
+    // only for 6 items
+    &:local(.fixed-2-3) {
+        @media (--screen-min-480) {
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(3, auto);
+        }
+
+        @media (--screen-min-1024) {
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(3, minmax(20vh, 33vh));
+
+            & > * {
+                &:nth-child(1),
+                &:nth-child(4) {
+                    grid-column: span 6;
+                }
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    grid-column: span 4;
+                }
+
+                &:nth-child(5),
+                &:nth-child(6) {
+                    grid-column: span 5;
+                }
+            }
+        }
+    }
+}
