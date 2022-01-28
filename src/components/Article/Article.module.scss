@@ -5,9 +5,13 @@
 
     box-sizing: border-box;
 
+    position: relative;
+    left: 50%;
+    right: 50%;
+
     display: grid;
     width: 100vw;
-    margin-left: calc(var(--base-padding) * -1); // to ignore container padding
+    margin-left: calc(50vw * -1); // to ignore container padding
     grid-template-columns: auto clamp(calc(var(--min-width) - var(--safe-padding)), 80vw, var(--content-width)) auto;
 
     & > * {
