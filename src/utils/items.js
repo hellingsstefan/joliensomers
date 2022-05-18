@@ -1,4 +1,4 @@
-import testImages from '../utils/testimages';
+import testImages from '@utils/testimages';
 
 export const items = testImages.map((image, index) => ({
     label: `image ${index}`,

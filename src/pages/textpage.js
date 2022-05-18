@@ -1,7 +1,7 @@
-import testImages from '../utils/testimages';
-import Article from '../components/Article';
-import Figure from '../components/Figure';
-import Blockquote from '../components/Blockquote';
+import testImages from '@utils/testimages';
+import Article from '@components/Article';
+import Figure from '@components/Figure';
+import Blockquote from '@components/Blockquote';
 
 function Textpage() {
     return (

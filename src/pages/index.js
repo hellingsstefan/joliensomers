@@ -1,10 +1,11 @@
 import { useContext, useEffect } from 'react';
-import { StyleContext } from '../context/StyleContext';
+import { StyleContext } from '@context/StyleContext';
 
-import items from '../utils/items';
-import Gallery from '../components/Gallery';
-import PhotoCard from '../components/PhotoCard';
-import JumbotronSlider from '../components/JumbotronSlider';
+import items from '@utils/items';
+import Gallery from '@components/Gallery';
+import PhotoCard from '@components/PhotoCard';
+import JumbotronSlider from '@components/JumbotronSlider';
+import Button from '@components/Button';
 
 const Home = () => {
     const setStyle = useContext(StyleContext)[1];
@@ -29,6 +30,9 @@ const Home = () => {
                 ))}
             </Gallery>
         </div>
+        <section>
+            <Button href="/portfolio/reportage/1" label="label" />
+        </section>
         </>
     );
 };

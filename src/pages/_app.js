@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { StyleProvider } from '../context/StyleContext';
-import Layout from '../components/Layout';
+import { StyleProvider } from '@context/StyleContext';
+import Layout from '@components/Layout';
 import '../styles/base.scss';
 
 function App({ Component, pageProps }) {
