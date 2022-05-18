@@ -8,6 +8,5 @@
 
 .h-safe-padding {
     box-sizing: border-box;
-    padding-left: var(--base-padding);
-    padding-right: var(--base-padding);
+    padding-inline: var(--base-padding);
 }

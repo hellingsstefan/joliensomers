@@ -9,9 +9,7 @@
     box-sizing: border-box;
     display: block;
     width: var(--breakout-width);
-    margin-left: calc(var(--breakout-width) / 2 * -1);
-    margin-right: calc(var(--breakout-width) / 2 * -1);
-
+    margin-inline: calc(var(--breakout-width) / 2 * -1);
     margin-bottom: 3rem;
     padding: 2rem 4rem 2rem 5rem;
 

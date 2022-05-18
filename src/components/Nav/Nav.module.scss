@@ -178,4 +178,13 @@
             display: block;
         }
     }
+
+    .nav.dark & {
+        color: var(--color-gray-300);
+
+        &::before,
+        &::after {
+            background-color: var(--color-gray-300);
+        }
+    }
 }

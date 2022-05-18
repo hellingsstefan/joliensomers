@@ -1,15 +1,18 @@
 import { createContext, useState } from 'react';
 
-export const StyleContext = createContext();
+const StyleContext = createContext({
+    style: 'light',
+    setStyle: () => {},
+});
 
-export function withStyleContext(Component) {
-    return function WrapperComponent(props) {
-        const [ style, setStyle ] = useState('light');
+const StyleProvider = ({ children }) => {
+    const [ state, setState ] = useState({});
 
-        return (
-            <StyleContext.Provider value={{ style, setStyle }}>
-                <Component {...props} />
-            </StyleContext.Provider>
-        );
-    };
-}
+    return (
+        <StyleContext.Provider value={[ state, setState ]}>
+            {children}
+        </StyleContext.Provider>
+    );
+};
+
+export { StyleContext, StyleProvider };

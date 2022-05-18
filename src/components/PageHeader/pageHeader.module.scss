@@ -1,17 +1,23 @@
 .pageHeader {
-    box-sizing: border-box;
-
     grid-area: header;
+
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: var(--base-padding, 1.5rem);
+    padding-block: 1.5rem var(--base-padding, 1.5rem);
+    padding-inline: var(--base-padding, 1.5rem);
+
+    transition: padding-block .5s ease, background-color .5s ease;
 
     :global(.nav-overlayMode.nav-isOpen) & {
-        position: relative;
         z-index: 10;
     }
 
@@ -21,5 +27,9 @@
 
     &.dark {
         background-color: var(--color-black);
+    }
+
+    &.compact {
+        padding-block: .5rem;
     }
 }

@@ -22,28 +22,116 @@ import img21 from '../public/testimages/image-21.jpg';
 import img22 from '../public/testimages/image-22.jpg';
 
 const images = [
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-    img11,
-    img12,
-    img13,
-    img14,
-    img15,
-    img16,
-    img17,
-    img18,
-    img19,
-    img20,
-    img21,
-    img22,
+    {
+        src: img1,
+        width: 1440,
+        height: 2160,
+    },
+    {
+        src: img2,
+        width: 1440,
+        height: 1800,
+    },
+    {
+        src: img3,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img4,
+        width: 1440,
+        height: 1626,
+    },
+    {
+        src: img5,
+        width: 1440,
+        height: 1080,
+    },
+    {
+        src: img6,
+        width: 1440,
+        height: 958,
+    },
+    {
+        src: img7,
+        width: 1440,
+        height: 958,
+    },
+    {
+        src: img8,
+        width: 1440,
+        height: 810,
+    },
+    {
+        src: img9,
+        width: 1440,
+        height: 959,
+    },
+    {
+        src: img10,
+        width: 1440,
+        height: 1920,
+    },
+    {
+        src: img11,
+        width: 1440,
+        height: 1650,
+    },
+    {
+        src: img12,
+        width: 1440,
+        height: 989,
+    },
+    {
+        src: img13,
+        width: 1440,
+        height: 1687,
+    },
+    {
+        src: img14,
+        width: 1440,
+        height: 958,
+    },
+    {
+        src: img15,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img16,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img17,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img18,
+        width: 1440,
+        height: 813,
+    },
+    {
+        src: img19,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img20,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img21,
+        width: 1440,
+        height: 960,
+    },
+    {
+        src: img22,
+        width: 1440,
+        height: 960,
+    },
 ];
 
 export default images;

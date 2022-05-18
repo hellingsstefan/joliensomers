@@ -26,3 +26,10 @@ clamp([y1]rem, [α]vw + [β]rem, [y2]rem);
 
     @return clamp(#{$min-font-size}rem, #{$alpha}vw + #{$beta}rem, #{$max-font-size}rem);
 }
+
+@function fluidClamp_vh($min-font-size, $max-font-size, $screen-width-start: $min-width, $screen-width-end: $max-width) {
+    $alpha: math.div((100 * ($max-font-size - $min-font-size)), ($screen-width-end - $screen-width-start));
+    $beta: math.div(($screen-width-start * $max-font-size) - ($screen-width-end * $min-font-size), ($screen-width-start - $screen-width-end));
+
+    @return clamp(#{$min-font-size}vh, #{$alpha}vw + #{$beta}vh, #{$max-font-size}vh);
+}

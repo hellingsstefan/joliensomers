@@ -34,8 +34,7 @@
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: calc(var(--breakout-width) / 2 * -1);
-    margin-right: calc(var(--breakout-width) / 2 * -1);
+    margin-inline: calc(var(--breakout-width) / 2 * -1);
 
     &:local(.small) {
         --breakout-width: calc(clamp(var(--min-width), 100vw, var(--content-width) + var(--breakout) * 2));
