@@ -7,7 +7,7 @@ export const items = testImages.map((image, index) => ({
     category: 'Category',
     image,
     alt: `image ${index}`,
-    url: '#',
+    url: `/portfolio/reportage/${index}`,
 }));
 
 export const jumbotronItems = [
@@ -18,7 +18,7 @@ export const jumbotronItems = [
         image: testImages[0],
         category: 'Category',
         alt: 'Jumbotron image',
-        url: '#',
+        url: '/portfolio/reportage/0',
     },
     {
         label: 'Jumbotron 2',
@@ -27,7 +27,7 @@ export const jumbotronItems = [
         image: testImages[1],
         category: 'Category',
         alt: 'Jumbotron image',
-        url: '#',
+        url: '/portfolio/reportage/1',
     },
     {
         label: 'Jumbotron 3',
@@ -36,7 +36,7 @@ export const jumbotronItems = [
         image: testImages[2],
         category: 'Category',
         alt: 'Jumbotron image',
-        url: '#',
+        url: '/portfolio/reportage/2',
     },
     {
         label: 'Jumbotron 4',
@@ -45,7 +45,7 @@ export const jumbotronItems = [
         image: testImages[3],
         category: 'Category',
         alt: 'Jumbotron image',
-        url: '#',
+        url: '/portfolio/reportage/3',
     },
     {
         label: 'Jumbotron 5',
@@ -54,7 +54,7 @@ export const jumbotronItems = [
         image: testImages[4],
         category: 'Category',
         alt: 'Jumbotron image',
-        url: '#',
+        url: '/portfolio/reportage/4',
     },
 ];
 

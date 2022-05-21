@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import testImages from '../../../utils/testimages';
-import PhotoCard from '../../../components/PhotoCard';
+import testImages from '@utils/testimages';
+import PhotoCard from '@components/PhotoCard';
 
 const Reportage = () => {
     const router = useRouter();

@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import c from 'classnames';
 import classes from './JumbotronSlider.module.scss';
 import Image from 'next/image';
-import Tagline from '../Tagline';
-import Title from '../Title';
-import Link from '../ArrowedLink';
+import Tagline from 'components/Tagline';
+import Title from 'components/Title';
+import Link from 'components/ArrowedLink';
+import Icon from 'components/Icon';
 
 const slide = (index, item) => (
     <div key={index} className={c(
@@ -14,10 +15,8 @@ const slide = (index, item) => (
     )}>
         <div className={classes.image}>
             <Image
+                {...item.image.src}
                 loading={index === 0 ? 'eager' : 'lazy'}
-                src={item.image.src}
-                width={item.image.width}
-                height={item.image.height}
                 alt={item.alt} />
         </div>
         <div className={classes.label}>
@@ -68,14 +67,10 @@ const JumbotronSlider = ({ items }) => {
             </div>
             <div className={classes.controls}>
                 <button onClick={prev} className={c(classes.button, classes.prev)}>
-                    <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 16L9.41 14.59L3.83 9L24 9L24 7L3.83 7L9.42 1.42L8 1.90798e-07L9.5399e-08 8L8 16Z" />
-                    </svg>
+                    <Icon icon="arrow-left" />
                 </button>
                 <button onClick={next} className={c(classes.button, classes.next)}>
-                    <svg viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16 -6.99382e-07L14.59 1.41L20.17 7L-3.93402e-07 7L-3.0598e-07 9L20.17 9L14.58 14.58L16 16L24 8L16 -6.99382e-07Z" />
-                    </svg>
+                    <Icon icon="arrow-right" />
                 </button>
             </div>
         </div>
@@ -86,9 +81,12 @@ const { arrayOf, shape, string, number } = PropTypes;
 JumbotronSlider.propTypes = {
     items: arrayOf(shape({
         image: shape({
-            src: string.isRequired,
-            width: number.isRequired,
-            height: number.isRequired,
+            src: shape({
+                blurDataURL: string,
+                src: string.isRequired,
+                width: number.isRequired,
+                height: number.isRequired,
+            }).isRequired,
         }).isRequired,
         alt: string.isRequired,
         label: string.isRequired,

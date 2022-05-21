@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import classes from './Social.module.scss';
 import c from 'classnames';
+import Icon from 'components/Icon';
 
 const items = [
     {
@@ -30,7 +31,7 @@ const Social = ({ style }) => (
                 target="_blank"
                 rel="noopener noreferrer">
                 <span className={classes.name}>{item.name}</span>
-                <span className={c(classes.icon, classes[item.icon])} />
+                <Icon icon={item.icon} />
             </a>
         ))}
     </div>

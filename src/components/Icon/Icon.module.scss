@@ -1,0 +1,46 @@
+$icons:
+    'facebook',
+    'instagram',
+    'twitter',
+    'arrow-left',
+    'arrow-right',
+    'email',
+    'chevron-down',
+    'checkmark';
+
+.icon {
+    display: inline-flex;
+    font-size: inherit;
+    line-height: 0;
+    width: 1em;
+    height: 1em;
+
+    color: currentColor;
+    transition: color .2s ease;
+
+    &::after {
+        content: '';
+
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        font-size: inherit;
+
+        background-color: currentColor;
+        background-repeat: no-repeat;
+
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        height: 1em;
+        width: calc(2.4rem / 2.4rem * 1em);
+    }
+}
+
+@each $icon in $icons {
+    .#{$icon} {
+        &::after {
+            mask-image: url(./svg/#{$icon}.svg);
+        }
+    }
+}

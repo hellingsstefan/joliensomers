@@ -11,24 +11,30 @@ const PhotoCard = ({ title, category, image, alt = '', href = '/' }) => (
             <header className={classes.header}>
                 <Tagline label={category} />
                 <Title label={title} level="3" />
-                {image.width}, {image.height}
                 <a className={classes.link}>Naar reportage</a>
             </header>
             <Image
-                src={image.src}
-                alt={alt}
-                width={image.width}
-                height={image.height} />
+                {...image.src}
+                alt={alt} />
         </figure>
     </Link>
 );
 
+const { number, shape, string } = PropTypes;
+
 PhotoCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    category: PropTypes.string.isRequired,
-    image: PropTypes.object.isRequired,
-    alt: PropTypes.string,
-    href: PropTypes.string,
+    title: string.isRequired,
+    category: string.isRequired,
+    image: shape({
+        src: shape({
+            blurDataURL: string,
+            src: string.isRequired,
+            width: number.isRequired,
+            height: number.isRequired,
+        }).isRequired,
+    }).isRequired,
+    alt: string,
+    href: string,
 };
 
 export default PhotoCard;
